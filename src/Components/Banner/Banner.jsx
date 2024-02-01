@@ -1,14 +1,18 @@
 import { Link } from "react-router-dom";
-
+import { FaArrowDown } from 'react-icons/fa';
+import {motion} from 'framer-motion';
+import img from "../../assets/bannerBg.png";
 const Banner = () => {
     return (
-        <div className="flex flex-col lg:flex-row-reverse justify-end items-end min-h-[80vh] p-8">
+        <div style={{backgroundImage: `url(${img})`}} className="pt-[50px] flex flex-col lg:flex-row-reverse justify-end bg-fixed bg-opacity-40 items-end hero min-h-screen p-8 gap-4 text-center">
+            <motion.div animate={{ y: -50, scale:1}} initial={{scale: 0}}    className="flex-1">
+                <h1 className="text-5xl lg:text-8xl font-bold uppercase text-center lg:text-end text-black">Quotes that spark inspiration</h1>
+            </motion.div>
             <div className="flex-1">
-                <h1 className="text-5xl lg:text-8xl font-bold uppercase text-center lg:text-end">Quotes that spark inspiration</h1>
-            </div>
-            <div className="flex-1">
-                {/* <p className="lg:text-lg py-4 lg:py-0 md:text-center lg:text-justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit nam ad est libero molestias laborum id nobis rerum, fugit culpa dicta in sint earum magnam cupiditate ipsum exercitationem cumque aperiam.</p> */}
-                <Link className="text-center"><button className=" text-center mx-auto p-6 hover:border-2 hover:bg-black hover:border-lime-400 hover:text-lime-400 w-[120px] h-[120px] rounded-[120px] text-black shadow-xl bg-lime-400 font-medium">Explore Now</button></Link>
+                
+               <div className="flex justify-end">
+               <Link className="lg:text-end "><motion.button  animate={{ y: -50, scale:1}} initial={{scale: 0}} transition={{delay: 1}}  className=" text-center mx-auto p-6 text-xl w-[150px] h-[150px] rounded-xl text-white shadow-xl bg-[#FFA447] hover:bg-[#F28585]   font-semibold uppercase">Explore <FaArrowDown className="text-center mx-auto my-4"></FaArrowDown></motion.button></Link>
+               </div>
             </div>
         </div>
     );
