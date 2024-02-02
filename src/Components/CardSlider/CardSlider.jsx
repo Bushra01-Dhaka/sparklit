@@ -1,6 +1,25 @@
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/free-mode';
+import 'swiper/css/pagination';
+
+import img1 from "../../assets/slider/1.png"
+import img2 from "../../assets/slider/2.png"
+import img3 from "../../assets/slider/3.png"
+import img4 from "../../assets/slider/4.png"
+import img5 from "../../assets/slider/5.png"
+import img6 from "../../assets/slider/6.png"
+import img7 from "../../assets/slider/7.png"
+
+// import required modules
+import { FreeMode, Pagination } from 'swiper/modules';
+
 const CardSlider = () => {
     return (
-        <div>
+        <div className='py-[100px]'>
             <Swiper
         slidesPerView={3}
         spaceBetween={30}
@@ -11,15 +30,27 @@ const CardSlider = () => {
         modules={[FreeMode, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide>
+        <SwiperSlide>
+            <img className='rounded-full' src={`${img1}`} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img className='rounded-md' src={`${img2}`} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img className='rounded-full' src={`${img3}`} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img className='rounded-md' src={`${img4}`} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img className='rounded-full' src={`${img5}`} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img className='rounded-md' src={`${img6}`} alt="" />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img className='rounded-full' src={`${img7}`} alt="" />
+        </SwiperSlide>
       </Swiper> 
         </div>
     );
